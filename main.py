@@ -2,6 +2,7 @@ from player import Player
 from logger import log_state
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 import pygame
+
 def main():
     pygame.init()
     
@@ -22,6 +23,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        player.update(dt)
         
         screen.fill("black")
 
